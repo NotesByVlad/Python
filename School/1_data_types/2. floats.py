@@ -22,7 +22,7 @@ Floating-point numbers are stored as binary approximations, which may lead to pr
 float1 = 3.14159  # Standard float
 float2 = -123.456  # Negative float
 float3 = 1.23e4  # Scientific notation (1.23 × 10^4 = 12300.0)
-float4 = float("3.14")  # From a string
+float4 = float("3.14") # From a string
 
 print("Float 1:", float1)
 print("Float 2:", float2)

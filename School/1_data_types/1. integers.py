@@ -34,12 +34,12 @@ print("Integer 3:", int3)
 Standard arithmetic operations include addition, subtraction, multiplication, division, 
 floor division, modulus and exponentiation.
 '''
-addition_result = int1 + int2       # Addition
-subtraction_result = int1 - int2    # Subtraction
+addition_result       = int1 + int2 # Addition
+subtraction_result    = int1 - int2 # Subtraction
 multiplication_result = int1 * 2    # Multiplication
-division_result = int1 / 2          # Division
+division_result       = int1 / 2    # Division
 floor_division_result = int1 // 5   # Floor Division (quotient only)
-modulus_result = int1 % 5           # Modulus (remainder)
+modulus_result        = int1 % 5    # Modulus (remainder)
 exponentiation_result = int1 ** 2   # Exponentiation
 
 print("\nAddition:",      addition_result)
@@ -73,27 +73,57 @@ print("Is Integer 1 less or equal to Integer 2?",   is_less_or_equal)
 Integers support bitwise operations, which operate at the binary level:
 - AND (`&`), OR (`|`), XOR (`^`), NOT (`~`), Left Shift (`<<`), Right Shift (`>>`).
 '''
-bitwise_and = int1 & 15  # Binary AND
-bitwise_or = int1 | 15  # Binary OR
-bitwise_xor = int1 ^ 15  # Binary XOR
-left_shift = int1 << 2  # Shift left by 2 bits
-right_shift = int1 >> 2  # Shift right by 2 bits
+
+# AND (&) → bitwise_and = int1 & 15
+# compares each bit of int1 with 15 (which is 1111 in binary)
+# it only keeps the bits that are 1 in both numbers
+# example: 10 & 15 → 1010 & 1111 → 1010 (which is 10 in decimal)
+bitwise_and = int1 & 15   # Binary AND
+
+# OR (|) → bitwise_or = int1 | 15
+# compares each bit and keeps a 1 if either number has a 1
+# example: 10 | 15 → 1010 | 1111 → 1111 (which is 15)
+bitwise_or = int1 | 15    # Binary OR
+
+# XOR (^) → bitwise_xor = int1 ^ 15
+# this keeps a 1 if the bits are different, and a 0 if they’re the same
+# example: 10 ^ 15 → 1010 ^ 1111 → 0101 (which is 5)
+bitwise_xor = int1 ^ 15   # Binary XOR
+
+# NOT (~) → bitwise_not = ~int1
+# this flips all the bits (turns 1s to 0s and vice versa)
+# in Python, it also changes the sign because of how negative numbers are stored (two’s complement)
+# example: ~10 → ~1010 → -11 (yes, negative!)
+bitwise_not = ~int1       # Binary NOT
+
+# Left Shift (<<) → left_shift = int1 << 2
+# this shifts all bits to the left by 2 places, adding 0s at the end
+# it's like multiplying by 2^2 (or 4)
+# example: 10 << 2 → 1010 becomes 101000 (which is 40)
+left_shift = int1 << 2    # Shift left by 2 bits
+
+# Right Shift (>>) → right_shift = int1 >> 2
+# this shifts bits to the right by 2 places, removing the last two bits
+# it's like dividing by 2^2 (or 4)
+# example: 10 >> 2 → 1010 becomes 0010 (which is 2)
+right_shift = int1 >> 2   # Shift right by 2 bits
 
 print("\nBitwise AND:", bitwise_and)
-print("Bitwise OR:", bitwise_or)
-print("Bitwise XOR:", bitwise_xor)
-print("Left Shift:", left_shift)
-print("Right Shift:", right_shift)
+print("Bitwise OR:",    bitwise_or)
+print("Bitwise XOR:",   bitwise_xor)
+print("Bitwise NOT:",   bitwise_not)
+print("Left Shift:",    left_shift)
+print("Right Shift:",   right_shift)
 
 # 5. Converting to Integers
 '''
 Integers can be created by casting from strings, floats, or other data types.
 '''
 float_to_int = int(3.14)  # From a float (truncates decimal part)
-str_to_int = int("123")  # From a string (must be a valid number)
+str_to_int   = int("123") # From a string (must be a valid number)
 
 print("\nFloat to Integer:", float_to_int)
-print("String to Integer:", str_to_int)
+print("String to Integer:",  str_to_int)
 
 # 6. Working with Large Integers
 '''
@@ -110,13 +140,13 @@ Python provides methods and functions for integers, such as:
 - `divmod()`: Returns a tuple (quotient, remainder).
 '''
 
-absolute_value = abs(int2)  # Absolute value
-power_value = pow(2, 10)  # 2 raised to the power of 10
-divmod_result = divmod(42, 5)  # Quotient and remainder as a tuple
+absolute_value = abs(int2)     # Absolute value
+power_value    = pow(2, 10)    # 2 raised to the power of 10
+divmod_result  = divmod(42, 5) # Quotient and remainder as a tuple
 
 print("\nAbsolute Value of Integer 2:", absolute_value)
-print("Power (2^10):", power_value)
-print("Divmod (42 / 5):", divmod_result)
+print("Power (2^10):",                  power_value)
+print("Divmod (42 / 5):",               divmod_result)
 
 # 8. Checking Integer Type
 '''
