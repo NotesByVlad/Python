@@ -1,5 +1,5 @@
 #----------------------------------------   Data Types in Python   ---------------------------------------------#
-#                                        -----------------------------
+#                                        --------------------------
 
 """
 In Python, data types define the kind of value a variable can hold. Each data type specifies the type of
@@ -13,7 +13,7 @@ but they are used to store data of specific types.
 
 Key Points about Data Types:
 
-1. **Data Types**: These define the type of value that a variable can hold.
+  **Data Types**: These define the type of value that a variable can hold.
     - Integer (int): Whole numbers like 1, -10, 200.
     - Floating-point numbers (float): Numbers with decimal points, like 3.14, -2.71.
     - String (str): A sequence of characters, such as "hello", "world".
@@ -22,10 +22,12 @@ Key Points about Data Types:
     - Dictionary (dict): A collection of key-value pairs, such as {"name": "Alice", "age": 30}.
     - Set: A collection of unique, unordered items, like {1, 2, 3}.
     - Boolean (bool): True or False values.
+    - Bytes: An immutable sequence of bytes.
+    - Bytearray: A mutable sequence of bytes.
     - NoneType: A special type representing the absence of value (None).
 """
 
-#----------------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 # 1. **Integers (int)**: Whole numbers without decimals.
 x = 10
@@ -66,17 +68,34 @@ is_active = True
 is_admin = False
 print(f"Boolean is_active: {is_active}, Boolean is_admin: {is_admin}")
 
-# 9. **NoneType**: A special type representing a null or absent value.
+# 9. **Bytes**: Immutable sequence of bytes, typically used for binary data.
+byte_data = bytes([0, 1, 2, 3, 4])
+print(f"Bytes byte_data: {byte_data}")
+
+# 10. **Bytearray**: Mutable sequence of bytes; can be modified after creation.
+mutable_byte_data = bytearray([5, 6, 7, 8, 9])
+mutable_byte_data[0] = 10  # Modify the first byte
+print(f"Bytearray mutable_byte_data: {mutable_byte_data}")
+
+# 11. **NoneType**: A special type representing a null or absent value.
 nothing = None
 print(f"NoneType nothing: {nothing}")
 
-#----------------------------------------------------------------------------------------------------------------------#
+
+
+
+
+
+
+
+#---------------------------------------------------------------------------------------------------------------#
 
 # Variables and Data Types
 '''
 In Python, **variables** are not data types themselves. Instead, they are used to store data of specific types. 
 
-A variable can hold any of the data types discussed above, and the type of data a variable stores is determined by the value assigned to it. 
+A variable can hold any of the data types discussed above, and the type of data a variable stores is determined 
+by the value assigned to it. 
 
 For example:
 '''
@@ -84,7 +103,8 @@ a = 42  # a is an integer variable
 b = "Hello"  # b is a string variable
 c = [1, 2, 3]  # c is a list variable
 
-# Python is dynamically typed, meaning the type of the variable is determined at runtime based on the value it holds.
+# Python is dynamically typed, meaning the type of the variable is determined at runtime based on the value 
+# it holds.
 print(f"Variable a holds an integer: {a}")
 print(f"Variable b holds a string: {b}")
 print(f"Variable c holds a list: {c}")
@@ -98,13 +118,15 @@ print(f"Now, variable a holds a string: {a}")
 # - Variables themselves do not have a data type.
 # - The data type refers to the kind of value stored in the variable (e.g., integer, string, list, etc.).
 
-#----------------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 # Summary:
 '''
 - **Data Types** define the type of data that a variable can store, such as integers, strings, lists, etc.
 - **Variables** are labels used to store and reference data of various types.
-- In Python, variables are dynamically typed, which means their type is determined by the value they hold at runtime.
+- In Python, variables are dynamically typed, which means their type is determined by the value they hold at 
+  runtime.
 - Variables themselves are not data types; they are used to store data that belongs to specific data types.
+- New data types covered: **Bytes (immutable)** and **Bytearray (mutable)**, used for handling binary data.
 '''
-#----------------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#

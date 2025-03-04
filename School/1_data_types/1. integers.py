@@ -1,4 +1,4 @@
-#----------------------------------------   Integers in Python   ------------------------------------------------------#
+#----------------------------------------   Integers in Python   -----------------------------------------------#
 #                                        -----------------------
 
 """
@@ -18,7 +18,7 @@ available memory allows.
 - Bitwise Operations: Integers support bitwise manipulations.
 - Precision: Python integers have unlimited precision, unlike fixed-size integers in some languages.
 '''
-#----------------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 
 # 1. Integer Initialization
 int1 = 42  # Positive integer
@@ -32,33 +32,41 @@ print("Integer 3:", int3)
 # 2. Arithmetic with Integers
 '''
 Standard arithmetic operations include addition, subtraction, multiplication, division, 
-exponentiation, and more.
+floor division, modulus and exponentiation.
 '''
-add_result = int1 + int2  # Addition
-sub_result = int1 - int2  # Subtraction
-mul_result = int1 * 2  # Multiplication
-div_result = int1 // 5  # Floor Division (quotient only)
-mod_result = int1 % 5  # Modulus (remainder)
-exp_result = int1 ** 2  # Exponentiation
+addition_result = int1 + int2       # Addition
+subtraction_result = int1 - int2    # Subtraction
+multiplication_result = int1 * 2    # Multiplication
+division_result = int1 / 2          # Division
+floor_division_result = int1 // 5   # Floor Division (quotient only)
+modulus_result = int1 % 5           # Modulus (remainder)
+exponentiation_result = int1 ** 2   # Exponentiation
 
-print("\nAddition:", add_result)
-print("Subtraction:", sub_result)
-print("Multiplication:", mul_result)
-print("Floor Division:", div_result)
-print("Modulus:", mod_result)
-print("Exponentiation:", exp_result)
+print("\nAddition:",      addition_result)
+print("Subtraction:",     subtraction_result)
+print("Multiplication:",  multiplication_result)
+print("Division:",        division_result)
+print("Floor Division:",  floor_division_result)
+print("Modulus:",         modulus_result)
+print("Exponentiation:",  exponentiation_result)
 
 # 3. Comparisons with Integers
 '''
 Integers can be compared using comparison operators like ==, !=, >, <, >=, and <=.
 '''
-is_equal = (int1 == 42)  # True
-is_greater = (int1 > int2)  # True
-is_less = (int3 < int1)  # True
+is_equal            = (int1 == 42)   # True   == equal
+not_equal           = (int1 != int2) # True   != not equal
+is_greater          = (int1 > int2)  # True   >  greater
+is_greater_or_equal = (int1 >= int2) # True   >= greater or equal
+is_less             = (int3 < int1)  # True   <  less
+is_less_or_equal    = (int1 <= int2) # False  <= less or equal
 
-print("\nIs Integer 1 equal to 42?", is_equal)
-print("Is Integer 1 greater than Integer 2?", is_greater)
-print("Is Integer 3 less than Integer 1?", is_less)
+print("\nIs Integer 1 equal to 42?",                is_equal)
+print("Is Integer 1 not equal to Integer 2?",       not_equal)
+print("Is Integer 1 greater than Integer 2?",       is_greater)
+print("Is Integer 1 greater or equal to Integer 2", is_greater_or_equal)
+print("Is Integer 3 less than Integer 1?",          is_less)
+print("Is Integer 1 less or equal to Integer 2?",   is_less_or_equal)
 
 # 4. Bitwise Operations
 '''
@@ -135,4 +143,4 @@ the maximum value. Python integers do not have this limitation due to their arbi
 very_large_int = 2 ** 100  # This would overflow in many languages
 print("\nVery Large Integer (2^100):", very_large_int)
 
-#----------------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
